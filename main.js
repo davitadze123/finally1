@@ -202,9 +202,8 @@ document.querySelector('.all').addEventListener('mouseover', function(){
 
 
     // ............................................................................
-
-    document.querySelector('form').addEventListener('sit', function(e) {
-    let name = document.getElementById('for').value;
+document.querySelector('form').addEventListener('submit', function(e) {
+    let name = document.getElementById('fname').value;
     let email = document.getElementById('email').value;
     let website = document.getElementById('website').value;
     let message = document.getElementById('message').value;
@@ -213,7 +212,10 @@ document.querySelector('.all').addEventListener('mouseover', function(){
         console.log(messages);
         
     });
-  
+    document.getElementById('fname').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('website').value = '';
+    document.getElementById('message').value = '';
     e.preventDefault();
 });
   
